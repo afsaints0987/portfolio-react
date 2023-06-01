@@ -4,16 +4,14 @@ import Loading from '../components/Loading'
 
 const Testimonial = () => {
     const [review, setReview] = useState()
-    const [loading, setLoading] = useState(false)
 
-    const fbUri = process.env.REACT_APP_FB_URL
-    const token = process.env.REACT_APP_TOKEN
+    const fbUri = import.meta.env.VITE_FB_URL
+    const token = import.meta.env.VITE_TOKEN
 
     // Fetch Reviews from Facebook API
-
+    
     useEffect(() => {
         const fetchReview = async () => {
-            setLoading(true)
             const response = await fetch(fbUri, {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -24,7 +22,6 @@ const Testimonial = () => {
             setReview(reviewData.ratings.data)
         }
         fetchReview();
-        setLoading(false)
     },[fbUri, token])
 
     if(!review){
@@ -33,7 +30,7 @@ const Testimonial = () => {
 
     return (
         <MotionContainer>
-            {loading ? <Loading /> :
+            
             <div className="container">
                 <h2 className="text-center text-lg-start">Testimonials</h2>
                 <div className="mt-4">
@@ -45,7 +42,8 @@ const Testimonial = () => {
                     ))}
                 </div>
             </div>
-            }
+            
+            
         </MotionContainer>
     )
 }

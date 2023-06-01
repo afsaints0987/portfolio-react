@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;900&display=swap');
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -10,13 +10,44 @@ $darkText: #323232;
 $darkMode: linear-gradient(90deg, #434343, #000000);
 $lightText: #f7f7f7;
 
+@mixin lightTheme {
+  background: $lightMode;
+  color: $darkText;
+
+  #logo {
+    p {
+      color: $darkText
+    }
+  }
+
+}
+
+@mixin darkTheme {
+  background: $darkMode;
+  color: $lightText;
+
+  #logo {
+    p {
+      color: $lightText
+    }
+  }
+
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: $darkText;
   font-family: Roboto;
-  background-image: $lightMode;
+  @include lightTheme();
+
+  &.dark {
+    @include darkTheme;
+  }
+
+  &.light {
+    @include lightTheme;
+  }
 
   a {
     color: #323232;
@@ -26,6 +57,14 @@ body {
   }
 
   // Navigation
+
+  #logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 35px;
+    display: flex;
+  }
+
   .sidebar {
     @media screen and (max-width: 900px){
       background-image: $lightMode;
@@ -45,18 +84,19 @@ body {
     text-align: center;
     margin: auto;
     min-height: 50vh;
+
+    
   }
 
   .inquire-btn {
     vertical-align: middle;
   }
 
-
-
   // Footer 
   .footer {
     z-index: -1000;
   }
+
 
   // Home Page
   #home-description {
@@ -191,4 +231,26 @@ body {
 
 
   // Blog Page
+
+
+
+  // Loader
+
+  #loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+
+    p {
+      font-size: 2rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+
+      @media screen and (max-width: 900px){
+        font-size: 1rem;
+      }
+    }
+  }
 }
