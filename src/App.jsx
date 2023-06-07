@@ -12,6 +12,7 @@ import Headline from './pages/Headline';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Loading from './components/Loading';
+import MotionContainer from './components/MotionContainer'
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
   return (
     
     <Router>
+      <MotionContainer>
       <Navigation/>
       <Routes>
         <Route exact path="/" element={<Home/>}>
@@ -47,11 +49,12 @@ function App() {
           <Route path="/contact" element={<Contact/>}/>
         </Route>
         <Route path="/projects" element={<Project/>}/>
+        <Route path="/projects/:id" element={<ProjectDetails/>}/>
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/blog/:id" element={<BlogDetails/>}/> 
-        <Route path="/projects/:id" element={<ProjectDetails/>}/>
       </Routes>
       <Footer/>
+      </MotionContainer>
     </Router>
     
   );

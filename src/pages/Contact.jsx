@@ -81,7 +81,7 @@ const Contact = () => {
                         <label className="form-label" htmlFor="message">Message</label>
                         <textarea name="message" type="text" className="form-control" cols="50" rows="4" onChange={handleChange}></textarea>
                     </div>
-                    <button type="submit" className="btn btn-outline-primary">{loading ? <Spinner animation="border" variant="light" size="sm" id="loading" /> : 'Submit'}</button>
+                    <button type="submit" className="btn btn-outline-primary">{loading ? <Spinner animation="border" variant="light" size="sm" /> : 'Submit'}</button>
                 </form>
             </div>
         </MotionContainer>

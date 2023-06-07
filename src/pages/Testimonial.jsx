@@ -31,7 +31,7 @@ const Testimonial = () => {
     return (
         <MotionContainer>
             
-            <div className="container">
+            <div className="container mt-4">
                 <h2 className="text-center text-lg-start">Testimonials</h2>
                 <div className="mt-4">
                     {review.map((data, index) => (

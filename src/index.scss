@@ -39,6 +39,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto;
+  min-height: 100vh;
   @include lightTheme();
 
   &.dark {
@@ -119,11 +120,12 @@ body {
     .headline {
       h1 {
         font-weight: 700;
+        text-shadow: 1px 1px 1px #323232;
       }
     }
 
     #headline-text {
-      font-weight: 500;
+      font-weight: 600;
       font-size: calc(0.25vw + 1.75vh)
     }
 
@@ -142,24 +144,6 @@ body {
       display: flex;
       justify-content: center;
 
-      .icon-link {
-        font-size: 2rem;
-
-        a {
-          color: $darkText;
-        }
-
-        &:nth-child(2){
-          margin-left: 5px;
-          margin-right: 5px;
-        }
-
-        &:hover {
-          cursor: pointer;
-          opacity: 0.75;
-          transition: opacity 0.2s ease-in-out;
-        }
-      }
     }
   }
 
