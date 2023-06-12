@@ -1,10 +1,12 @@
-import Spinner from 'react-bootstrap/Spinner'
 
-const Loading = () => {
+import loader from '../assets/loader.gif'
+
+const Loading = ({title}) => {
     return (
-        <>
-         <Spinner animation="border" variant="light" size="sm"/>   
-        </>
+        <div id="loading" className="text-center">
+            <img src={loader} alt="loader" width="75px" className="rounded-circle"/>
+            <p>{title}</p>
+        </div>
     )
 }
 

@@ -2,7 +2,7 @@ import MotionContainer from '../components/MotionContainer'
 import * as FaIcons from 'react-icons/fa'
 import {useRef, useState} from 'react'
 import emailjs from '@emailjs/browser'
-import Loading from '../components/Loading'
+import Spinner from 'react-bootstrap/Spinner'
 
 
 const Contact = () => {
@@ -16,9 +16,9 @@ const Contact = () => {
         message: ''
     })
     const form = useRef();
-    const serviceId = process.env.REACT_APP_SERVICE_ID
-    const templateId = process.env.REACT_APP_TEMPLATE_ID
-    const publicKey = process.env.REACT_APP_PUBLIC_KEY
+    const serviceId = import.meta.env.VITE_SERVICE_ID
+    const templateId = import.meta.env.VITE_TEMPLATE_ID
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY
 
     const handleChange = e => {
         const {name, value} = e.target
@@ -81,7 +81,7 @@ const Contact = () => {
                         <label className="form-label" htmlFor="message">Message</label>
                         <textarea name="message" type="text" className="form-control" cols="50" rows="4" onChange={handleChange}></textarea>
                     </div>
-                    <button type="submit" className="btn btn-primary">{loading ? <Loading/> : 'Submit'}</button>
+                    <button type="submit" className="btn btn-outline-primary">{loading ? <Spinner animation="border" variant="light" size="sm" /> : 'Submit'}</button>
                 </form>
             </div>
         </MotionContainer>
