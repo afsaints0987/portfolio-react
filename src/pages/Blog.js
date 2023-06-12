@@ -16,17 +16,17 @@ const Blog = () => {
         fetchBlog();
     },[])
 
-    if(!blogs){
-        return
-    }
-    console.log(blogs)
+    // if(!blogs){
+    //     return null
+    // }
+    // console.log(blogs)
     
     return (
         <MotionContainer>
             <div className="container">
                 <h2 className="text-center text-lg-start">Blog</h2>
 
-                {blogs.map((blog, index) => (
+                {!blogs ? <p>Coming Soon...</p> : blogs.map((blog, index) => (
                     <div key={index} className="card mt-4 bg-light p-4 shadow">
                         <h3>{blog.attributes.title}</h3>
                         <small>{new Date().toDateString(blog.attributes.createdAt)}</small>

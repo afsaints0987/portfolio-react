@@ -1,5 +1,4 @@
 import PDF from '../assets/official_cv.pdf'
-import {useState} from 'react'
 
 const PdfViewer = () => {
     // Pdf file view from modal

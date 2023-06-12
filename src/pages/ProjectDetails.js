@@ -22,7 +22,7 @@ const ProjectDetails = () => {
     },[id])
 
     if(!project){
-        return
+        return null
     }
 
     console.log(project)
@@ -33,7 +33,7 @@ const ProjectDetails = () => {
                 <div className="row">
                     <div className="col-lg-6 mt-5">
                         <h4>{project.attributes.title}</h4>
-                        <img src={project.attributes.image_link} className="img-thumbnail"/>
+                        <img src={project.attributes.image_link} className="img-thumbnail" alt="project-link"/>
                     </div>
                     <div className="col-lg-6 d-flex flex-column align-items-center mt-5">
                         <p>{project.attributes.details}</p>
