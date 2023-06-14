@@ -193,10 +193,13 @@ body {
   // Project Page 
 
   .project-container {
-    overflow: scroll;
     height: 75vh;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+
+    .grid {
+      gap: 1rem;
+      justify-content: space-evenly;
+    }
+    
 
 
     #projBtn {
@@ -210,8 +213,6 @@ body {
       text-align: justify;
     }
   }
-
-  // Testimonial Page
 
 
   // Blog Page

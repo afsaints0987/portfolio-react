@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import Project from './pages/Project';
 import ProjectDetails from './pages/ProjectDetails'
@@ -49,7 +49,7 @@ function App() {
           <Route path="/contact" element={<Contact/>}/>
         </Route>
         <Route path="/projects" element={<Project/>}/>
-        <Route path="/projects/:id" element={<ProjectDetails/>}/>
+        <Route path="/project/:id" element={<ProjectDetails/>}/>
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/blog/:id" element={<BlogDetails/>}/> 
       </Routes>
