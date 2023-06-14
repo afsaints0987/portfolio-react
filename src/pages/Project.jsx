@@ -68,7 +68,7 @@ const Project = () => {
                 <img src={project.image} alt="sample-image" className="img-thumbnail"/>
                 </div>
                 <div className="card-body">
-                  <h5 className="card-title">{project.title}</h5>
+                  <p className="card-title">{project.title}</p>
                   <p className="card-description">{project.description}</p>
                   <Link to={`/project/${project.id}`}>Full Details &rarr;</Link>
                 </div>

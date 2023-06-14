@@ -3,11 +3,11 @@
 
 
 // Light Mode
-$lightMode: linear-gradient(90deg, #cfd9df  , #e2ebf0);
+$lightMode: linear-gradient(180deg, #fff, #e2ebf0);
 $darkText: #323232;
 
 // Dark Mode
-$darkMode: linear-gradient(90deg, #434343, #000000);
+$darkMode: linear-gradient(90deg, #323232, #000000);
 $lightText: #f7f7f7;
 
 @mixin lightTheme {
@@ -56,7 +56,10 @@ body {
     margin-right: 1.5rem;
 
   }
-
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  }
   // Navigation
 
   #logo {
@@ -198,6 +201,18 @@ body {
     .grid {
       gap: 1rem;
       justify-content: space-evenly;
+
+      .card-header{
+        img {
+          object-fit: fill;
+        }
+      }
+      .card-body {
+        .card-title {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+      }
     }
     
 

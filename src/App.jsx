@@ -1,5 +1,5 @@
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import {useState, useEffect} from 'react'
+import {useState, useCallback, useEffect} from 'react'
 import Project from './pages/Project';
 import ProjectDetails from './pages/ProjectDetails'
 import Home from './pages/Home';
@@ -17,15 +17,16 @@ import MotionContainer from './components/MotionContainer'
 
 function App() {
   const [loading, setLoading] = useState(false)
+  
+  const loadSplashScreen = () => {
+    setLoading(true)
+  }
 
   useEffect(() => {
-    const loadSplashScreen = () => {
-      setLoading(true)
-    }
     loadSplashScreen();
     setTimeout(() => {
       setLoading(false)
-    },5000)
+    },3000)
   },[])
   
   if(loading){
@@ -35,6 +36,7 @@ function App() {
     </>
     )
   }
+
 
   return (
     
