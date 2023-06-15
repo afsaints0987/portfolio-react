@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react'
 import { Outlet } from 'react-router-dom';
-import * as FaIcons from 'react-icons/fa'
-import { SocialIcon } from 'react-social-icons';
+
 
 const Typewriter = ({text, speed}) => {
     const [displayText, setDisplayText] = useState("")
@@ -33,11 +32,6 @@ const Home = () => {
                         <h1>Aaron Fritz Santos</h1>
                         <Typewriter text="Full Stack Developer | UI/UX Designer" speed={50}/>
                     </div>
-                    <div className="icons container">
-                        <SocialIcon url="https://github.com/afsaints0987" style={{height: 50, width: 50}} target="_blank" rel="noreferrer noopener" />
-                        <SocialIcon url="https://www.linkedin.com/in/afsaints0987/" style={{height: 50, width: 50}} target="_blank" rel="noreferrer noopener"/>
-                        <SocialIcon url="https://www.facebook.com/afsaintsdesign/" style={{height: 50, width: 50}} target="_blank" rel="noreferrer noopener"/>
-                    </div> 
                 </div>
                 <div className="col-lg-6">
                     <Outlet/>
