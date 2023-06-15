@@ -23,7 +23,7 @@ const Blog = () => {
     },[])
 
     if(loading){
-        return (<Loading/>)
+        return (<Loading title="Loading"/>)
     }
     
     return (
