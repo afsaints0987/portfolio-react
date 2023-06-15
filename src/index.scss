@@ -3,11 +3,11 @@
 
 
 // Light Mode
-$lightMode: linear-gradient(90deg, #cfd9df  , #e2ebf0);
+$lightMode: linear-gradient(90deg, #fff, #f3f3f3, #e2ebf0);
 $darkText: #323232;
 
 // Dark Mode
-$darkMode: linear-gradient(90deg, #434343, #000000);
+$darkMode: linear-gradient(90deg, #323232, #000000);
 $lightText: #f7f7f7;
 
 @mixin lightTheme {
@@ -56,7 +56,10 @@ body {
     margin-right: 1.5rem;
 
   }
-
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  }
   // Navigation
 
   #logo {
@@ -129,14 +132,29 @@ body {
       font-size: calc(0.25vw + 1.75vh)
     }
 
+    .avatar {
+      outline: 3px solid #5c5c5c;
+      border: 2px solid #f3f3f3;
+      border-radius: 50%;
+    }
+
     .avatar-img {
       display: block;
-      background-image: url('./assets/avatar_profile.jpg');
+      background-image: url('./assets/avatar-2.jpg');
+      background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
       border-radius: 50%;
+      
       width: 150px;
       height: 150px;
+      transition: all 0.3s ease-in-out;
+      
+      &:hover {
+        background-image: url('./assets/avatar_profile.jpg');
+        transform: rotateY(360deg);
+        transition: all 0.3s ease-in-out;
+      }
     }
 
     .icons {
@@ -193,10 +211,25 @@ body {
   // Project Page 
 
   .project-container {
-    overflow: scroll;
     height: 75vh;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+
+    .grid {
+      gap: 1rem;
+      justify-content: space-evenly;
+
+      .card-header{
+        img {
+          object-fit: fill;
+        }
+      }
+      .card-body {
+        .card-title {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+      }
+    }
+    
 
 
     #projBtn {
@@ -210,8 +243,6 @@ body {
       text-align: justify;
     }
   }
-
-  // Testimonial Page
 
 
   // Blog Page

@@ -5,9 +5,11 @@ import Loading from '../components/Loading'
 
 const Blog = () => {
     const [blogs, setBlogs] = useState()
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         const fetchBlog = async () => {
+            setLoading(true)
             const response = await fetch('http://localhost:1337/api/blogs');
             const data = await response.json()
             const blogData = data.data
@@ -15,16 +17,20 @@ const Blog = () => {
         }
 
         fetchBlog();
+        setTimeout(() => {
+            setLoading(false)
+        }, 3000)
     },[])
 
-    if(!blogs){
-        return (<Loading/>)
+    if(loading){
+        return (<Loading title="Loading"/>)
     }
     
     return (
         <MotionContainer>
             <div className="container">
                 <h2 className="text-center text-lg-start">Blog</h2>
+
 
                 {!blogs ? 'No Blog Available' : blogs.map((blog, index) => (
                     <div key={index} className="card mt-4 bg-light p-4 shadow">
