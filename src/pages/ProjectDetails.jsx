@@ -33,11 +33,7 @@ const ProjectDetails = () => {
                 <div className="row">
                     <div className="col-lg-6 mt-5">
                         <h4>{project.attributes.title}</h4>
-<<<<<<< HEAD:src/pages/ProjectDetails.js
-                        <img src={project.attributes.image_link} className="img-thumbnail" alt="project-link"/>
-=======
                         <img src={project.attributes.image_link} className="img-thumbnail" alt={project.attributes.id}/>
->>>>>>> refs/remotes/origin/main:src/pages/ProjectDetails.jsx
                     </div>
                     <div className="col-lg-6 d-flex flex-column align-items-center mt-5">
                         <p>{project.attributes.details}</p>
