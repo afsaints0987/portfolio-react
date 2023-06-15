@@ -9,15 +9,17 @@ const Blog = () => {
 
     useEffect(() => {
         const fetchBlog = async () => {
+            setLoading(true)
             const response = await fetch('http://localhost:1337/api/blogs');
             const data = await response.json()
             const blogData = data.data
-            setLoading(true)
             setBlogs(blogData)
         }
 
         fetchBlog();
-        setLoading(false)
+        setTimeout(() => {
+            setLoading(false)
+        }, 3000)
     },[])
 
     if(loading){
