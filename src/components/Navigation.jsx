@@ -2,6 +2,7 @@ import {Link} from 'react-router-dom'
 import * as FaIcons from 'react-icons/fa'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import {useState} from 'react'
+import logo from '../assets/logo-1.png'
 
 const Navigation = () => {
     const [show, setShow] = useState(false)
@@ -17,7 +18,9 @@ const Navigation = () => {
         <nav className="navbar navbar-expand-lg bg-transparent">
             <div className="container">
                 <div className="navbar-brand" id="logo">
-                    <Link to='/'><p>afs</p></Link>
+                    <Link to='/'>
+                        <img src={logo} alt="logo" width="75px"/>
+                    </Link>
                 </div>
                 <span className="sidebar-nav d-block d-lg-none d-md-none mx-4" onClick={handleShow}><FaIcons.FaBars /></span>
                 <Offcanvas show={show} onHide={handleClose} responsive="md" className="sidebar">
