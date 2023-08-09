@@ -32,7 +32,7 @@ function App() {
   if(loading){
     return (
     <>
-      <Loading title="Welcome to my Site!"/>
+      <Loading title="< Welcome to my Site! />"/>
     </>
     )
   }

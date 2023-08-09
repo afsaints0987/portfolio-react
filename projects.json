@@ -1,0 +1,25 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Randomify User",
+            "description": "An application created from React JS using a REST API randomuser.me",
+            "url": "https://randomify-user.netlify.app/",
+            "image": "src/assets/thumbnail-1.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Taskify Manager",
+            "description": "A full stack application build in MERN tech stack which lets the user Create, Read, Update and Delete task",
+            "url": "https://taskify-manager.netlify.app/",
+            "image": "src/assets/thumbnail-2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Milktea Landing Page",
+            "description": "A landing page site created from React JS",
+            "url": "https://yoursago.netlify.app/",
+            "image": "src/assets/thumbnail-3.jpg"
+        }
+    ]
+}

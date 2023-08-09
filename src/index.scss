@@ -62,12 +62,6 @@ body {
   }
   // Navigation
 
-  #logo {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    font-size: 35px;
-    display: flex;
-  }
 
   .sidebar {
     @media screen and (max-width: 900px){
@@ -129,7 +123,8 @@ body {
 
     #headline-text {
       font-weight: 600;
-      font-size: calc(0.25vw + 1.75vh)
+      font-size: calc(0.25vw + 1.75vh);
+      font-family: 'Courier New', Courier, monospace
     }
 
     .avatar {
@@ -212,30 +207,14 @@ body {
 
   .project-container {
     height: 75vh;
-
-    .grid {
-      gap: 1rem;
-      justify-content: space-evenly;
-
-      .card-header{
-        img {
-          object-fit: fill;
-        }
-      }
-      .card-body {
-        .card-title {
-          font-size: 1.2rem;
-          font-weight: 600;
-        }
-      }
-    }
     
-
-
-    #projBtn {
-      display: flex;
-      align-self: center !important;
+    
+    .proj-select:hover {
+      font-weight: 900;
+      transition: all 0.3s ease-in-out
     }
+
+    
   }
   // Project Details 
   #proj-detail {

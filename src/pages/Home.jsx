@@ -17,7 +17,7 @@ const Typewriter = ({text, speed}) => {
     return () => clearInterval(intervalId);
     }, [currentIndex, speed, text]);
     
-    return <p id="headline-text">{displayText}</p>
+    return <p id="headline-text" >{displayText}</p>
 }
 
 const Home = () => {
