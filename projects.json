@@ -20,6 +20,20 @@
             "description": "A landing page site created from React JS",
             "url": "https://yoursago.netlify.app/",
             "image": "src/assets/thumbnail-3.jpg"
+        },
+        {
+            "id": 4,
+            "title": "WebApps Site Page",
+            "description": "A website created from React JS",
+            "url": "https://webapps-services.vercel.app/",
+            "image": "src/assets/thumbnail-4.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Chicken Rotisserie Website",
+            "description": "A website created from React JS",
+            "url": "https://yourmanok.netlify.app/",
+            "image": "src/assets/thumbnail-5.jpg"
         }
     ]
 }
