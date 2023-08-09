@@ -40,7 +40,7 @@ const Project = () => {
             {projects.map((proj) => (
                 <ul className="proj-list list-group-flush" key={proj.id}>
                   <li className="list-group-item mt-2" >
-                    <button className="btn btn-sm proj-select text-start" onClick={() => handleProject(proj.id)}>{proj.title}</button>
+                    <button className="btn btn-sm proj-select text-start-lg text-center" onClick={() => handleProject(proj.id)}>{proj.title}</button>
                   </li>
                 </ul>
             ))}

@@ -62,11 +62,7 @@ body {
   }
   // Navigation
 
-
   .sidebar {
-    @media screen and (max-width: 900px){
-      background-image: $lightMode;
-    }
     .nav-link {
       font-weight: 500;
     }
