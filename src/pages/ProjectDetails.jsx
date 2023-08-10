@@ -23,7 +23,7 @@ const ProjectDetails = () => {
                 <Link to='/projects'><FaIcons.FaAngleDoubleLeft/> Back to Projects</Link>
                 <div className="row">
                     {project && project.map(proj => (
-                        <div className="my-4">
+                        <div className="my-4" key={proj.id}>
                             <img src={`../${proj.image}`} className="img-fluid mb-3" id="proj-hover"/>
                             <div className="text-wrap">
                                 <h4>{proj.title}</h4>

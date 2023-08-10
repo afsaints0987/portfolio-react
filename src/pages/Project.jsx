@@ -7,8 +7,8 @@ import axios from "axios";
 
 
 const Project = () => {
+  const [projects, setProjects] = useState([])
   const [project, setProject] = useState([])
-  const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(0)
 
   useEffect(() => {
@@ -25,11 +25,13 @@ const Project = () => {
   },[])
 
   const handleProject = (id = selectedProject) => {
-    const projectSelected = projects.find(proj => proj.id === id)
-    setProject([projectSelected])
-    console.log(projectSelected)
+    const projectSelected = projects.filter(proj => proj.id === id)
+    setProject(projectSelected)
   }
-
+  
+  useEffect(() => {
+    handleProject()
+  },[projects])
   
   return (
     <MotionContainer>
@@ -46,7 +48,7 @@ const Project = () => {
             ))}
           </div>
             <div className="proj-details col-lg-9">
-              {project && project.map(proj => (
+              {project.map(proj => (
                 <div className="text-center d-flex" key={proj.id}>
                     <motion.div initial={{opacity: 0}}
                     animate={{opacity: 1}}
