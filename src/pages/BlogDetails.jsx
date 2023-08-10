@@ -21,7 +21,7 @@ const BlogDetails = () => {
     },[id])
 
     if(!blog){
-        return
+        return null
     }
 
     console.log(blog)

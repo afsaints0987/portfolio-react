@@ -5,8 +5,8 @@ import ProjectDetails from './pages/ProjectDetails'
 import Home from './pages/Home';
 import About from './pages/About';
 import Testimonial from './pages/Testimonial';
-import Blog from './pages/Blog';
-import BlogDetails from './pages/BlogDetails'
+// import Blog from './pages/Blog';
+// import BlogDetails from './pages/BlogDetails'
 import Contact from './pages/Contact';
 import Headline from './pages/Headline';
 import Navigation from './components/Navigation';
@@ -51,8 +51,8 @@ function App() {
         </Route>
         <Route path="/projects" element={<Project/>}/>
         <Route path="/project/:id" element={<ProjectDetails/>}/>
-        <Route path="/blog" element={<Blog/>}/>
-        <Route path="/blog/:id" element={<BlogDetails/>}/> 
+        {/* <Route path="/blog" element={<Blog/>}/>
+        <Route path="/blog/:id" element={<BlogDetails/>}/>  */}
       </Routes>
       <Footer/>
       </MotionContainer>
