@@ -5,6 +5,7 @@
             "title": "Randomify User",
             "description": "An application created from React JS using a REST API randomuser.me",
             "url": "https://randomify-user.netlify.app/",
+            "github": "https://github.com/afsaints0987/random-user",
             "image": "src/assets/thumbnail-1.jpg"
         },
         {
@@ -12,6 +13,7 @@
             "title": "Taskify Manager",
             "description": "A full stack application build in MERN tech stack which lets the user Create, Read, Update and Delete task",
             "url": "https://taskify-manager.netlify.app/",
+            "github": "https://github.com/afsaints0987/task-manager",
             "image": "src/assets/thumbnail-2.jpg"
         },
         {
@@ -19,6 +21,7 @@
             "title": "Milktea Landing Page",
             "description": "A landing page site created from React JS",
             "url": "https://yoursago.netlify.app/",
+            "github": "https://github.com/afsaints0987/yoursago",
             "image": "src/assets/thumbnail-3.jpg"
         },
         {
@@ -26,6 +29,7 @@
             "title": "WebApps Site Page",
             "description": "A website created from React JS",
             "url": "https://webapps-services.vercel.app/",
+            "github": "https://github.com/afsaints0987/react-landing-page",
             "image": "src/assets/thumbnail-4.jpg"
         },
         {
@@ -33,6 +37,7 @@
             "title": "Chicken Rotisserie Website",
             "description": "A website created from React JS",
             "url": "https://yourmanok.netlify.app/",
+            "github": "https://github.com/afsaints0987/yourmanok",
             "image": "src/assets/thumbnail-5.jpg"
         }
     ]

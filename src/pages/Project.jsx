@@ -1,5 +1,5 @@
 import MotionContainer from "../components/MotionContainer";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import * as FaIcons from "react-icons/fa"
 import { Link } from "react-router-dom";
 import {motion} from 'framer-motion'
@@ -37,7 +37,7 @@ const Project = () => {
     <MotionContainer>
       <div className="container mt-4">
         <h2 className="text-center mb-4">Projects</h2>
-        <div className="project-container px-4 py-2 row">
+        <div className="project-container px-4 py-2 d-flex flex-column-reverse flex-lg-row">
           <div className="col-lg-3">
             {projects.map((proj) => (
                 <ul className="proj-list list-group-flush" key={proj.id}>

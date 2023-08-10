@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;900&display=swap');
-@import 'bootstrap/dist/css/bootstrap.min.css';
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;900&display=swap");
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 // Light Mode
 $lightMode: linear-gradient(90deg, #fff, #f3f3f3, #e2ebf0);
@@ -16,10 +15,9 @@ $lightText: #f7f7f7;
 
   #logo {
     p {
-      color: $darkText
+      color: $darkText;
     }
   }
-
 }
 
 @mixin darkTheme {
@@ -28,10 +26,9 @@ $lightText: #f7f7f7;
 
   #logo {
     p {
-      color: $lightText
+      color: $lightText;
     }
   }
-
 }
 
 body {
@@ -54,10 +51,9 @@ body {
     color: #323232;
     text-decoration: none;
     margin-right: 1.5rem;
-
   }
   h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
   }
   // Navigation
@@ -78,19 +74,16 @@ body {
     text-align: center;
     margin: auto;
     min-height: 50vh;
-
-    
   }
 
   .inquire-btn {
     vertical-align: middle;
   }
 
-  // Footer 
+  // Footer
   .footer {
     z-index: -1000;
   }
-
 
   // Home Page
   #home-description {
@@ -100,7 +93,7 @@ body {
     align-items: center;
     margin-top: 8.75rem;
 
-    @media screen and (max-width: 900px){
+    @media screen and (max-width: 900px) {
       margin-top: 3rem;
     }
   }
@@ -120,7 +113,7 @@ body {
     #headline-text {
       font-weight: 600;
       font-size: calc(0.25vw + 1.75vh);
-      font-family: 'Courier New', Courier, monospace
+      font-family: "Courier New", Courier, monospace;
     }
 
     .avatar {
@@ -131,18 +124,18 @@ body {
 
     .avatar-img {
       display: block;
-      background-image: url('./assets/avatar-2.jpg');
+      background-image: url("./assets/avatar-2.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
       border-radius: 50%;
-      
+
       width: 150px;
       height: 150px;
       transition: all 0.3s ease-in-out;
-      
+
       &:hover {
-        background-image: url('./assets/avatar_profile.jpg');
+        background-image: url("./assets/avatar_profile.jpg");
         transform: rotateY(360deg);
         transition: all 0.3s ease-in-out;
       }
@@ -152,7 +145,6 @@ body {
       list-style: none;
       display: flex;
       justify-content: center;
-
     }
   }
 
@@ -164,7 +156,6 @@ body {
     margin: auto;
     min-height: 50vh;
   }
-
 
   // Contact Page {
   #contact {
@@ -199,30 +190,80 @@ body {
     }
   }
 
-  // Project Page 
+  // Project Page
 
   .project-container {
     height: 75vh;
-    
-    
-    .proj-select:hover {
-      font-weight: 900;
-      transition: all 0.3s ease-in-out
+
+    @media screen and (max-width: 600px) {
+      .proj-details {
+        h4 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
     }
 
-    
+    .proj-select:hover {
+      font-weight: 900;
+      transition: all 0.3s ease-in-out;
+    }
   }
-  // Project Details 
+  // Project Details
   #proj-detail {
     p {
       text-align: justify;
+
+      @media screen and (max-width: 600px) {
+        font-size: 14px;
+      }
+    }
+    
+    .project-container {
+
+      .img-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        
+        .icons {
+          font-size: 50px;
+          color: #323232;
+          transition: 0.5s;
+
+          &:hover {
+            cursor: pointer;
+            color: #007bff;
+            transition: 0.5s;
+          }
+        }
+
+        p {
+          font-family: 'Courier New', Courier, monospace;
+          margin-top: 5px;
+        }
+      }
+
+      &:hover {
+        transition: 0.5s;
+
+        .img-overlay{
+          display: flex;
+          justify-content: space-between;
+        }
+        .project-image {
+          opacity: 0.3;
+          transition: 0.5s;
+        }
+      }
     }
   }
 
-
   // Blog Page
-
-
 
   // Loader
 
@@ -235,10 +276,10 @@ body {
 
     p {
       font-size: 2rem;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: 500;
 
-      @media screen and (max-width: 900px){
+      @media screen and (max-width: 900px) {
         font-size: 1rem;
       }
     }
