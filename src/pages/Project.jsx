@@ -39,13 +39,15 @@ const Project = () => {
         <h2 className="text-center mb-4">Projects</h2>
         <div className="project-container px-4 py-2 d-flex flex-column-reverse flex-lg-row">
           <div className="col-lg-3">
-            {projects.map((proj) => (
-                <ul className="proj-list list-group-flush" key={proj.id}>
-                  <li className="list-group-item mt-2" >
-                    <button className="btn btn-sm proj-select text-start-lg" onClick={() => handleProject(proj.id)}>{proj.title}</button>
-                  </li>
-                </ul>
-            ))}
+            <div>
+              {projects.map((proj) => (
+                  <ul className="proj-list list-group-flush" key={proj.id}>
+                    <li className="list-group-item mt-2" >
+                      <button className="btn btn-sm proj-select text-start-lg" onClick={() => handleProject(proj.id)}>{proj.title}</button>
+                    </li>
+                  </ul>
+              ))}
+            </div>
           </div>
             <div className="proj-details col-lg-9">
               {project.map(proj => (

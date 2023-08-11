@@ -30,29 +30,31 @@ const ProjectDetails = () => {
         <div>
           {project &&
             project.map((proj) => (
-              <div className="my-4 project-container" key={proj.id}>
-                <img
-                  src={`../${proj.image}`}
-                  className="img-fluid mb-3 project-image"
-                />
-                <div className="img-overlay">
-                  <a
-                    href={proj.github}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="text-center"
-                  >
-                    <FaIcons.FaGithub className="icons mx-2" />
-                    <p>Github</p>
-                  </a>
-                  <a href={proj.url} target="_blank" rel="noreferrer noopener" className="text-center">
-                    <FaIcons.FaGlobe className="icons mx-2" />
-                    <p>Website</p>
-                  </a>
+              <div className="my-4" key={proj.id}>
+                <div className="proj-detail-container">
+                    <img
+                    src={`../${proj.image}`}
+                    className="img-fluid mb-3 project-image"
+                    />
+                    <div className="img-overlay">
+                    <a
+                        href={proj.github}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="text-center"
+                    >
+                        <FaIcons.FaGithub className="icons mx-2" />
+                        <p>Github</p>
+                    </a>
+                    <a href={proj.url} target="_blank" rel="noreferrer noopener" className="text-center">
+                        <FaIcons.FaGlobe className="icons mx-2" />
+                        <p>Website</p>
+                    </a>
+                    </div>
                 </div>
                 <div className="text-wrap">
                   <h4>{proj.title}</h4>
-                  <p>{proj.description}</p>
+                  <p>{proj.brief}</p>
                 </div>
               </div>
             ))}

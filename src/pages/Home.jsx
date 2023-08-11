@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import { Outlet } from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa'
 
 
 const Typewriter = ({text, speed}) => {
@@ -31,6 +32,14 @@ const Home = () => {
                     <div className="headline mt-4">
                         <h1>Aaron Fritz Santos</h1>
                         <Typewriter text="Full Stack Developer | UI/UX Designer" speed={50}/>
+                        <div className="tech-skills d-flex justify-content-evenly" style={{fontSize: "40px"}}>
+                            <FaIcons.FaHtml5/>
+                            <FaIcons.FaCss3Alt/>
+                            <FaIcons.FaJs/>
+                            <FaIcons.FaReact/>
+                            <FaIcons.FaNodeJs/>
+                            <FaIcons.FaGit/>
+                        </div>
                     </div>
                 </div>
                 <div className="col-lg-6">

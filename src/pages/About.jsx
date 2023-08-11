@@ -42,9 +42,12 @@ const About = () => {
             and can work under pressure.
           </p>
         </div>
+        <a href={PDF} download="Official-CV" className="btn btn-outline-primary d-lg-none">
+              <FaIcons.FaDownload /> Download CV
+        </a>
 
         <button
-          className="btn btn-outline-primary mt-2"
+          className="btn btn-outline-primary mt-2 d-none d-lg-block"
           onClick={() => setModalShow(true)}
         >
           <FaIcons.FaFilePdf /> View CV

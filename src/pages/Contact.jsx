@@ -63,7 +63,7 @@ const Contact = () => {
             {error && <p className="text-danger">{message}</p>}
             {success && <p className="text-success">{message}</p>}
                 <ul className="contact-icons p-0 mt-2">
-                    <li className="contact-icon"><FaIcons.FaMapMarkerAlt className="mx-2"/> Marikina, PH</li>
+                    <li className="contact-icon"><FaIcons.FaMapMarkerAlt className="mx-2"/> Manila, PH</li>
                     <li className="contact-icon my-2"><FaIcons.FaEnvelope className="mx-2"/> saints0987@gmail.com</li>
                     <li className="contact-icon"><FaIcons.FaPhoneAlt className="mx-2"/> +63 9958613015</li>
                 </ul>
