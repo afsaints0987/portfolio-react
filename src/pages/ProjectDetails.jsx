@@ -11,7 +11,7 @@ const ProjectDetails = () => {
   useEffect(() => {
     const getProjectItem = async () => {
       const projectItemData = await axios.get(
-        "http://localhost:5173/projects.json"
+        "/projects.json"
       );
       const projectItems = projectItemData.data.projects;
       const projectItem = projectItems.filter(

@@ -14,6 +14,7 @@ const Project = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       const projectData  = await axios.get("projects.json")
+      console.log(projectData)
       const projectList = projectData.data
       const projectItems = projectList.projects
       setProjects(projectItems)
