@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 import * as FaIcons from 'react-icons/fa'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import {useState} from 'react'
-import logo from '../assets/logo-1.png'
+import logo from '/assets/logo-1.png'
 
 const Navigation = () => {
     const [show, setShow] = useState(false)

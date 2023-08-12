@@ -1,8 +1,6 @@
-import PDF from '../assets/official_cv.pdf'
+import PDF from '/assets/official_cv.pdf'
 
 const PdfViewer = () => {
-
-
     // Pdf file view from modal
     return (
         <div className="d-flex justify-content-center">         
