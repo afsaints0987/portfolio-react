@@ -23,6 +23,7 @@ const Footer = () => {
           rel="noreferrer noopener"
         />
       </div>
+      <p style={{ fontFamily: "Courier New" }}>v2.0.0</p>
     </footer>
   );
 };

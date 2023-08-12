@@ -1,5 +1,5 @@
-import loader from '../assets/loader.gif'
-import loader2 from '../assets/loader-2.gif'
+import loader from '/assets/loader.gif'
+import loader2 from '/assets/loader-2.gif'
 
 const Loading = ({title}) => {
     return (

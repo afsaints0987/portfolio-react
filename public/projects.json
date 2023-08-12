@@ -7,7 +7,7 @@
             "brief": "The is a sophisticated web app crafted using React JS and the randomuser.me REST API. It offers an intuitive interface where users can discover random user profiles, complete with names, pictures, contact details, and more. The app's seamless integration ensures a smooth experience across devices, with real-time data fetching for dynamic content. Users can easily navigate profiles using filters and sorting options, making it a modern and engaging way to explore user data. Overall, the application showcases the potential of React JS and REST APIs to create an interactive and visually appealing browsing experience.",
             "url": "https://randomify-user.netlify.app/",
             "github": "https://github.com/afsaints0987/random-user",
-            "image": "src/assets/thumbnail-1.jpg"
+            "image": "/assets/thumbnail-1.jpg"
         },
         {
             "id": 2,
@@ -16,7 +16,7 @@
             "brief": "This is a comprehensive full stack application developed using the MERN (MongoDB, Express.js, React, Node.js) technology stack. This powerful application empowers users to perform essential task management actions, including creating, reading, updating, and deleting tasks. Through its cohesive integration of MERN components, the app delivers a seamless and efficient experience for users seeking effective task organization and control.",
             "url": "https://taskify-manager.netlify.app/",
             "github": "https://github.com/afsaints0987/task-manager",
-            "image": "src/assets/thumbnail-2.jpg"
+            "image": "/assets/thumbnail-2.jpg"
         },
         {
             "id": 3,
@@ -25,7 +25,7 @@
             "brief": "This is a sleek and engaging website built entirely using React JS. This landing page serves as a captivating online introduction, offering visitors an immersive experience with modern web design. By harnessing the capabilities of React JS, the page seamlessly combines interactive elements, dynamic content, and visually appealing aesthetics to leave a lasting impression on users.",
             "url": "https://yoursago.netlify.app/",
             "github": "https://github.com/afsaints0987/yoursago",
-            "image": "src/assets/thumbnail-3.jpg"
+            "image": "/assets/thumbnail-3.jpg"
         },
         {
             "id": 4,
@@ -34,7 +34,7 @@
             "brief": "This is a dynamic and versatile online platform developed using the React JS framework. This website showcases the power of React's component-based architecture to deliver a modern and interactive user experience. By leveraging the capabilities of React, the website efficiently renders and updates content, creating a seamless browsing experience for visitors. Whether for informational purposes, e-commerce, or any other online presence, the React JS Website offers a solid foundation for building engaging and responsive web interfaces.",
             "url": "https://webapps-services.vercel.app/",
             "github": "https://github.com/afsaints0987/react-landing-page",
-            "image": "src/assets/thumbnail-4.jpg"
+            "image": "/assets/thumbnail-4.jpg"
         },
         {
             "id": 5,
@@ -43,7 +43,7 @@
             "brief": "This is a captivating online platform developed using React JS. This website specializes in showcasing a variety of chicken rotisserie dishes, leveraging the power of React to deliver an engaging and visually appealing user experience. Visitors can explore a range of mouthwatering dishes, all presented within a seamless and interactive interface crafted using React's modern web development capabilities.",
             "url": "https://yourmanok.netlify.app/",
             "github": "https://github.com/afsaints0987/yourmanok",
-            "image": "src/assets/thumbnail-5.jpg"
+            "image": "/assets/thumbnail-5.jpg"
         },
         {
             "id": 6,
@@ -52,7 +52,7 @@
             "brief": "This is a showcase of my skills in web development, featuring my past portfolio crafted using HTML, CSS, and JavaScript. Notably, this portfolio was meticulously created without relying on any frameworks. The website offers a firsthand demonstration of my proficiency in front-end technologies and design, highlighting my ability to construct an impressive digital portfolio from scratch.",
             "url": "https://saintsdev.com/fritzsantos",
             "github": "https://github.com/afsaints0987/dev_portfolio",
-            "image": "src/assets/thumbnail-6.jpg"
+            "image": "/assets/thumbnail-6.jpg"
         }
     ]
 }

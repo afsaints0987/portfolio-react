@@ -2,17 +2,17 @@ import {Link} from 'react-router-dom'
 import * as FaIcons from 'react-icons/fa'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import {useState} from 'react'
-import logo from '../assets/logo-1.png'
+import logo from '/assets/logo-1.png'
 
 const Navigation = () => {
     const [show, setShow] = useState(false)
 
-    const handleClose = () => {
-        setShow(false)
-    }
-    const handleShow = () => {
-        setShow(true)
-    }
+  const handleClose = () => {
+    setShow(false);
+  };
+  const handleShow = () => {
+    setShow(true);
+  };
 
     return (
         <nav className="navbar navbar-expand-lg bg-transparent">
@@ -39,4 +39,4 @@ const Navigation = () => {
     )
 }
 
-export default Navigation
+export default Navigation;

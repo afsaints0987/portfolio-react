@@ -91,7 +91,7 @@ body {
     flex-direction: column;
     text-align: justify;
     align-items: center;
-    margin-top: 8.75rem;
+    margin-top: 6.75rem;
 
     @media screen and (max-width: 900px) {
       margin-top: 3rem;
@@ -124,7 +124,7 @@ body {
 
     .avatar-img {
       display: block;
-      background-image: url("./assets/avatar-2.jpg");
+      background-image: url("/assets/avatar-2.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;

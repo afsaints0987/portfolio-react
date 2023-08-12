@@ -2,7 +2,7 @@ import * as FaIcons from "react-icons/fa";
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import MotionContainer from "../components/MotionContainer";
-import PDF from "../assets/official_cv.pdf";
+import PDF from "/assets/official_cv.pdf";
 import PdfViewer from "../components/PdfViewer";
 
 const About = () => {
