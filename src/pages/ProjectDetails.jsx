@@ -1,49 +1,67 @@
-import {useParams, Link} from 'react-router-dom'
-import MotionContainer from '../components/MotionContainer'
-// import {useState, useEffect} from 'react'
-import * as FaIcons from 'react-icons/fa'
+import { useParams, Link } from "react-router-dom";
+import MotionContainer from "../components/MotionContainer";
+import { useState, useEffect } from "react";
+import * as FaIcons from "react-icons/fa";
+import axios from "axios";
 
 const ProjectDetails = () => {
-    const {id} = useParams()
-    // const [project, setProject] = useState()
+  const [project, setProject] = useState([]);
+  const { id } = useParams();
 
-    // useEffect(()=> {
-    //     const fetchProject = async () => {
-    //         const response = await fetch(`http://localhost:1337/api/projects/${id}`)
-    //         const data = await response.json()
-
-    //         const projDetail = data.data
-
-    //         console.log(projDetail)
-    //         setProject(projDetail)
-    //     }
-    //     fetchProject();
-
-    // },[id])
-
-    // if(!project){
-    //     return
-    // }
-
-    // console.log(project)
-
-    return (
-        <MotionContainer>
-            <div className="container" id="proj-detail">
-                <div className="row">
-                    {/* <div className="col-lg-6 mt-5">
-                        <h4>{project.attributes.title}</h4>
-                        <img src={project.attributes.image_link} className="img-thumbnail" alt={project.attributes.id}/>
+  useEffect(() => {
+    const getProjectItem = async () => {
+      const projectItemData = await axios.get(
+        "/projects.json"
+      );
+      const projectItems = projectItemData.data.projects;
+      const projectItem = projectItems.filter(
+        (proj) => proj.id === parseInt(id)
+      );
+      setProject(projectItem);
+    };
+    getProjectItem();
+  }, []);
+  return (
+    <MotionContainer>
+      <div className="container" id="proj-detail">
+        <Link to="/projects">
+          <FaIcons.FaAngleDoubleLeft /> Back to Projects
+        </Link>
+        <div>
+          {project &&
+            project.map((proj) => (
+              <div className="my-4" key={proj.id}>
+                <div className="proj-detail-container">
+                    <img
+                    src={`../${proj.image}`}
+                    className="img-fluid mb-3 project-image"
+                    />
+                    <div className="img-overlay">
+                    <a
+                        href={proj.github}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="text-center"
+                    >
+                        <FaIcons.FaGithub className="icons mx-2" />
+                        <p>Github</p>
+                    </a>
+                    <a href={proj.url} target="_blank" rel="noreferrer noopener" className="text-center">
+                        <FaIcons.FaGlobe className="icons mx-2" />
+                        <p>Website</p>
+                    </a>
                     </div>
-                    <div className="col-lg-6 d-flex flex-column align-items-center mt-5">
-                        <p>{project.attributes.details}</p>
-                        <a href={project.attributes.link} className="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit the site</a>
-                    </div> */}
                 </div>
-                <Link to='/projects'><FaIcons.FaAngleDoubleLeft/> Back to Projects</Link>
-            </div>
-        </MotionContainer>
-    )
-}
+                <div className="text-wrap">
+                  <h4>{proj.title}</h4>
+                  <p>{proj.brief}</p>
+                </div>
+              </div>
+            ))}
+        </div>
+      </div>
+    </MotionContainer>
+  );
+};
 
-export default ProjectDetails
+export default ProjectDetails;

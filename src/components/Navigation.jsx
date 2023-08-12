@@ -30,7 +30,7 @@ const Navigation = () => {
                         <Link to='/about' className="nav-link" onClick={()=>{handleClose()}}>About</Link>
                         <Link to='/projects' className="nav-link" onClick={()=>{handleClose()}}>Projects</Link>
                         <Link to='/testimonials' className="nav-link" onClick={()=>{handleClose()}}>Testimonials</Link>
-                        <Link to='/blog' className="nav-link" onClick={()=>{handleClose()}}>Blog</Link>
+                        {/* <Link to='/blog' className="nav-link" onClick={()=>{handleClose()}}>Blog</Link> */}
                         <Link to='/contact' className="nav-link" onClick={()=>{handleClose()}}>Contact</Link>
                     </Offcanvas.Body> 
                 </Offcanvas>

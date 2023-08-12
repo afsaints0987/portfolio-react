@@ -1,110 +1,70 @@
 import MotionContainer from "../components/MotionContainer";
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import * as FaIcons from "react-icons/fa"
 import { Link } from "react-router-dom";
-import Loading from "../components/Loading";
-import sampleImage from "../assets/sample-image.jpg"
-
-
-const projectData = [
-  {
-    id: 1,
-    title: "Project 1",
-    description: "This is a sample project",
-    image: sampleImage
-  },
-  {
-    id: 2,
-    title: "Project 2",
-    description: "This is a sample project 2",
-    image: sampleImage
-  },
-  {
-    id: 3,
-    title: "Project 3",
-    description: "This is a sample project 3",
-    image: sampleImage
-  },
-  {
-    id: 4,
-    title: "Project 4",
-    description: "This is a sample project 4",
-    image: sampleImage
-  }
-]
+import {motion} from 'framer-motion'
+import axios from "axios";
 
 
 const Project = () => {
+  const [projects, setProjects] = useState([])
+  const [project, setProject] = useState([])
+  const [selectedProject, setSelectedProject] = useState(0)
 
-  // const [project, setProject] = useState();
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const projectData  = await axios.get("projects.json")
+      console.log(projectData)
+      const projectList = projectData.data
+      const projectItems = projectList.projects
+      setProjects(projectItems)
 
-  // useEffect(() => {
-  //   const fetchProjects = async () => {
-  //     const response = await fetch("http://localhost:1337/api/projects");
-  //     const data = await response.json();
+      const defaultProjectId = projectItems.length > 0 ? projectItems[0].id : 0;
+      setSelectedProject(defaultProjectId)
+    }
+    fetchProjects();
+  },[])
 
-  //     const projectData = data.data;
-
-  //     console.log(projectData);
-  //     setProject(projectData);
-  //   };
-  //   fetchProjects();
-  // }, []);
-
-  // if (!project) {
-  //   return <Loading />;
-  // }
-
+  const handleProject = (id = selectedProject) => {
+    const projectSelected = projects.filter(proj => proj.id === id)
+    setProject(projectSelected)
+  }
+  
+  useEffect(() => {
+    handleProject()
+  },[projects])
+  
   return (
     <MotionContainer>
       <div className="container mt-4">
-        <h2 className="text-center">Projects</h2>
-        <div className="project-container px-4 py-2">
-
-          <div className="grid row">
-            {projectData.map(project => (
-
-              <div className="card col-md-3 p-0" key={project.id}>
-                <div className="card-header">
-                <img src={project.image} alt="sample-image" className="img-thumbnail"/>
-                </div>
-                <div className="card-body">
-                  <p className="card-title">{project.title}</p>
-                  <p className="card-description">{project.description}</p>
-                  <Link to={`/project/${project.id}`}>Full Details &rarr;</Link>
-                </div>
-              </div>
-            ))
-
-            }
+        <h2 className="text-center mb-4">Projects</h2>
+        <div className="project-container px-4 py-2 d-flex flex-column-reverse flex-lg-row">
+          <div className="col-lg-3">
+            <div>
+              {projects.map((proj) => (
+                  <ul className="proj-list list-group-flush" key={proj.id}>
+                    <li className="list-group-item mt-2" >
+                      <button className="btn btn-sm proj-select text-start-lg" onClick={() => handleProject(proj.id)}>{proj.title}</button>
+                    </li>
+                  </ul>
+              ))}
+            </div>
           </div>
-          {/* {!project
-            ? "No Project Available"
-            : project.map((p, index) => (
-                <div
-                  key={index}
-                  className="d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start"
-                >
-                  <h5 className="mt-3">{p.attributes.title}</h5>
-                  <Link to={`/projects/${p.id}`}>
-                    <img
-                      src={p.attributes.image_link}
-                      alt="banner"
-                      width="600"
-                      className="img-thumbnail my-2"
-                    />
-                  </Link>
-                  <p>{p.attributes.description}</p>
-                  <a
-                    className="btn btn-sm btn-outline-primary"
-                    id="projBtn"
-                    href={p.attributes.link}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Go to website
-                  </a>
-                </div>
-              ))} */}
+            <div className="proj-details col-lg-9">
+              {project.map(proj => (
+                <div className="text-center d-flex" key={proj.id}>
+                    <motion.div initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    exit={{opacity: 0}}>
+                    <a href={proj.url} target="_blank" rel="noreferrer noopener"><img src={proj.image} alt={proj.title} className="rounded-3 mb-4 shadow img-thumbnail w-75"/></a>
+                    <h4>{proj.title}</h4>
+                    <p>{proj.description}</p>
+                    <Link to={`/project/${proj.id}`}>Full Details <FaIcons.FaAngleDoubleRight/></Link>                  
+                    </motion.div>
+                  </div>  
+              ))}
+            </div>
+
         </div>
       </div>
     </MotionContainer>
@@ -112,3 +72,4 @@ const Project = () => {
 };
 
 export default Project;
+
