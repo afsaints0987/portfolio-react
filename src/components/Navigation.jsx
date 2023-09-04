@@ -19,7 +19,7 @@ const Navigation = () => {
             <div className="container">
                 <div className="navbar-brand" id="logo">
                     <Link to='/'>
-                        <img src={logo} alt="logo" width="75px"/>
+                        <img src={logo} alt="logo" width="75px" height="75px"/>
                     </Link>
                 </div>
                 <span className="sidebar-nav d-block d-lg-none d-md-none mx-4" onClick={handleShow}><FaIcons.FaBars /></span>
