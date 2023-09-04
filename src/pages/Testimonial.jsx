@@ -37,7 +37,7 @@ const Testimonial = () => {
                     {review.map((data, index) => (
                         <div key={index} className="card p-4 mb-3 shadow">
                             <p>“ {data.review_text} ”</p>
-                            <small style={{'fontStyle': 'italic'}}>{data.created_time.slice(0, 10)}</small>
+                            <small style={{'fontStyle': 'italic'}}>{new Date(data.created_time).toString().slice(0,15)}</small>
                         </div>
                     ))}
                 </div>
