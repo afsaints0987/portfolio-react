@@ -55,7 +55,7 @@ const Project = () => {
                     <motion.div initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     exit={{opacity: 0}}>
-                    <a href={proj.url} target="_blank" rel="noreferrer noopener"><img src={proj.image} alt={proj.title} className="rounded-3 mb-4 shadow img-thumbnail w-75" loading="lazy"/></a>
+                    <a href={proj.url} target="_blank" rel="noreferrer noopener"><img src={proj.image} alt={proj.title} className="rounded-3 mb-4 shadow img-fluid w-auto" loading="lazy"/></a>
                     <h4>{proj.title}</h4>
                     <p>{proj.description}</p>
                     <Link to={`/project/${proj.id}`}>Full Details <FaIcons.FaAngleDoubleRight/></Link>                  
