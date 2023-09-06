@@ -4,10 +4,10 @@ import loader2 from '/assets/loader-2.gif'
 const Loading = ({title}) => {
     return (
         <div id="loading" className="text-center">
-            <img src={loader} alt="loader" width="75px" className="rounded-circle"/>
+            <img src={loader} alt="loader" width="75px" className="rounded-circle" loading='lazy'/>
             
             <p style={{fontFamily: "Courier, monospace", fontWeight: "bold", fontSize: "18px"}} className="mt-4">{title}</p>
-            <img src={loader2} alt="loader2" width="50px"/>
+            <img src={loader2} alt="loader2" width="50px" loading='lazy'/>
         </div>
     )
 }
