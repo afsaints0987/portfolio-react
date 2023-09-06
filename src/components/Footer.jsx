@@ -3,7 +3,7 @@ import { SocialIcon } from "react-social-icons";
 const Footer = () => {
   return (
     <footer className="container text-center footer mb-2">
-      <div className="icons container">
+      <div className="icons container mb-4">
         <SocialIcon
           url="https://github.com/afsaints0987"
           style={{ height: 40, width: 40 }}
