@@ -7,6 +7,7 @@ import PdfViewer from "../components/PdfViewer";
 
 const About = () => {
   const [modalShow, setModalShow] = useState(false);
+  const today = new Date().getFullYear()
 
   return (
     <MotionContainer>
@@ -14,7 +15,7 @@ const About = () => {
         <h2 className="text-center text-lg-start">Life as a Developer</h2>
         <div className="text-wrap mt-3 text-justify" id="about-text">
           <p>
-            As a solution-driven web developer and web designer with 2 years of
+            As a solution-driven web developer and web designer with {today - 2020} years of
             experience creating business solutions for SMEs, I look forward to
             sharing my technical and analytical skills with any organization
             I'll be working with.
