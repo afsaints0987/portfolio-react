@@ -35,6 +35,7 @@ const ProjectDetails = () => {
                     <img
                     src={`../${proj.image}`}
                     className="img-fluid mb-3 project-image"
+                    loading="lazy"
                     />
                     <div className="img-overlay">
                     <a
