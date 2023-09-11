@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Poppins:wght@400;500;900&display=swap");
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 // Light Mode
@@ -35,7 +35,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Roboto;
+  font-family: 'Karla', sans-serif;
   min-height: 100vh;
   @include lightTheme();
 
@@ -61,6 +61,13 @@ body {
   .sidebar {
     .nav-link {
       font-weight: 500;
+      transition: 0.2s ease-in;
+
+      &:hover {
+        font-weight: 600;
+        color: #0d6efd;
+        transition: all 0.2s ease-in;
+      }
     }
   }
 
