@@ -40,7 +40,7 @@ const Navigation = () => {
           <Offcanvas.Body className={show && "sidebar-display"}>
             <Link
               to="/"
-              className="nav-link"
+              className="nav-link pt-2"
               onClick={() => {
                 handleClose();
               }}
@@ -49,7 +49,7 @@ const Navigation = () => {
             </Link>
             <Link
               to="/about"
-              className="nav-link"
+              className="nav-link pt-2"
               onClick={() => {
                 handleClose();
               }}
@@ -58,7 +58,7 @@ const Navigation = () => {
             </Link>
             <Link
               to="/projects"
-              className="nav-link"
+              className="nav-link pt-2"
               onClick={() => {
                 handleClose();
               }}
@@ -67,7 +67,7 @@ const Navigation = () => {
             </Link>
             <Link
               to="/testimonials"
-              className="nav-link"
+              className="nav-link pt-2"
               onClick={() => {
                 handleClose();
               }}
