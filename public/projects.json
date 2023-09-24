@@ -3,6 +3,8 @@
         {
             "id": 1,
             "title": "Randomify User",
+            "year": "2023", 
+            "category": "Capstone project",
             "description": "An application created from React JS using a REST API randomuser.me",
             "brief": "The is a sophisticated web app crafted using React JS and the randomuser.me REST API. It offers an intuitive interface where users can discover random user profiles, complete with names, pictures, contact details, and more. The app's seamless integration ensures a smooth experience across devices, with real-time data fetching for dynamic content. Users can easily navigate profiles using filters and sorting options, making it a modern and engaging way to explore user data. Overall, the application showcases the potential of React JS and REST APIs to create an interactive and visually appealing browsing experience.",
             "url": "https://randomify-user.netlify.app/",
@@ -12,6 +14,8 @@
         {
             "id": 2,
             "title": "Taskify Manager",
+            "year": "2022",
+            "category": "Personal project",
             "description": "A full stack application build in MERN tech stack which lets the user Create, Read, Update and Delete task",
             "brief": "This is a comprehensive full stack application developed using the MERN (MongoDB, Express.js, React, Node.js) technology stack. This powerful application empowers users to perform essential task management actions, including creating, reading, updating, and deleting tasks. Through its cohesive integration of MERN components, the app delivers a seamless and efficient experience for users seeking effective task organization and control.",
             "url": "https://taskify-manager.netlify.app/",
@@ -21,6 +25,8 @@
         {
             "id": 3,
             "title": "Milktea Landing Page",
+            "year": "2020 (Updated last: 2023)",
+            "category": "Freelance Project",
             "description": "A landing page site created from React JS",
             "brief": "This is a sleek and engaging website built entirely using React JS. This landing page serves as a captivating online introduction, offering visitors an immersive experience with modern web design. By harnessing the capabilities of React JS, the page seamlessly combines interactive elements, dynamic content, and visually appealing aesthetics to leave a lasting impression on users.",
             "url": "https://yoursago.netlify.app/",
@@ -30,6 +36,8 @@
         {
             "id": 4,
             "title": "WebApps Site Page",
+            "year": "2022",
+            "category": "Side Project",
             "description": "A website created from React JS",
             "brief": "This is a dynamic and versatile online platform developed using the React JS framework. This website showcases the power of React's component-based architecture to deliver a modern and interactive user experience. By leveraging the capabilities of React, the website efficiently renders and updates content, creating a seamless browsing experience for visitors. Whether for informational purposes, e-commerce, or any other online presence, the React JS Website offers a solid foundation for building engaging and responsive web interfaces.",
             "url": "https://webapps-services.vercel.app/",
@@ -39,6 +47,8 @@
         {
             "id": 5,
             "title": "Chicken Rotisserie Website",
+            "year": "2021",
+            "category":"Freelance Project",
             "description": "A website created from React JS",
             "brief": "This is a captivating online platform developed using React JS. This website specializes in showcasing a variety of chicken rotisserie dishes, leveraging the power of React to deliver an engaging and visually appealing user experience. Visitors can explore a range of mouthwatering dishes, all presented within a seamless and interactive interface crafted using React's modern web development capabilities.",
             "url": "https://yourmanok.netlify.app/",
@@ -48,11 +58,24 @@
         {
             "id": 6,
             "title": "Portfolio Website",
+            "year": "2021",
+            "category": "Personal project",
             "description": "My previous portfolio created from HTML, CSS and JavaScript showcasing my skills on creating my portfolio without using a framework",
             "brief": "This is a showcase of my skills in web development, featuring my past portfolio crafted using HTML, CSS, and JavaScript. Notably, this portfolio was meticulously created without relying on any frameworks. The website offers a firsthand demonstration of my proficiency in front-end technologies and design, highlighting my ability to construct an impressive digital portfolio from scratch.",
             "url": "https://saintsdev.com/fritzsantos",
             "github": "https://github.com/afsaints0987/dev_portfolio",
             "image": "/assets/thumbnail-6.jpg"
+        },
+        {
+          "id": 7,
+          "title": "KPI Dashboard",
+          "year": "2022",
+          "category": "Work Project",
+          "description": "The Microsoft Power Platform KPI Dashboard offers real-time, data-driven insights for informed decision-making. It integrates seamlessly with third-party APIs using Power Automate, providing a clear and concise snapshot of key performance indicators.",
+          "brief": "The KPI Dashboard, built with Microsoft Power Platform, provides a concise and visual snapshot of critical key performance indicators. It offers real-time insights into essential metrics, allowing for quick decision-making and performance tracking. This dynamic tool leverages the power of data integration through Power Automate, ensuring accurate and up-to-date information for informed business actions. I am responsible for creating a KPI Dashboard using Microsoft Power Platform. My role involves utilizing Microsoft Power Automate to retrieve data from a third-party API and seamlessly integrate it into MS Power Apps, resulting in an efficient and informative KPI Dashboard.",
+          "url": "",
+          "github": "",
+          "image": "/assets/thumbnail-7.png"
         }
     ]
 }

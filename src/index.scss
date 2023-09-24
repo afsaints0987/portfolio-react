@@ -35,7 +35,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   min-height: 100vh;
   @include lightTheme();
 
@@ -59,7 +59,6 @@ body {
   // Navigation
 
   .sidebar {
-
     .nav-link {
       font-weight: 500;
       transition: 0.2s ease-in;
@@ -228,9 +227,8 @@ body {
         font-size: 14px;
       }
     }
-    
-    .proj-detail-container {
 
+    .proj-detail-container {
       .img-overlay {
         position: absolute;
         top: 50%;
@@ -239,10 +237,13 @@ body {
         display: none;
 
         @media screen and (max-width: 900px) {
-          top: 30%
+          top: 30%;
         }
-        @media screen and (max-width: 900px) {
-          top: 40%
+        @media screen and (min-width: 901px) {
+          left: 35%;
+        }
+        @media screen and (max-width: 600px) {
+          top: 35%;
         }
 
         .icons {
@@ -262,7 +263,7 @@ body {
         }
 
         p {
-          font-family: 'Courier New', Courier, monospace;
+          font-family: "Courier New", Courier, monospace;
           margin-top: 5px;
         }
       }
@@ -270,7 +271,7 @@ body {
       &:hover {
         transition: 0.5s;
 
-        .img-overlay{
+        .img-overlay {
           display: flex;
           justify-content: space-between;
         }
