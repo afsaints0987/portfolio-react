@@ -5,6 +5,7 @@ import ProjectDetails from './pages/ProjectDetails'
 import Home from './pages/Home';
 import About from './pages/About';
 import Testimonial from './pages/Testimonial';
+import Error404 from './pages/Error404';
 // import Blog from './pages/Blog';
 // import BlogDetails from './pages/BlogDetails'
 import Contact from './pages/Contact';
@@ -53,6 +54,7 @@ function App() {
         <Route path="/project/:id" element={<ProjectDetails/>}/>
         {/* <Route path="/blog" element={<Blog/>}/>
         <Route path="/blog/:id" element={<BlogDetails/>}/>  */}
+        <Route path="*" element={<Error404/>}/>
       </Routes>
       <Footer/>
       </MotionContainer>
