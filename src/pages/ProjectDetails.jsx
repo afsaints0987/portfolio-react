@@ -23,13 +23,15 @@ const ProjectDetails = () => {
     getProjectItem();
   }, []);
 
-  const nextProject = () => {
-    console.log('this is going to next project')
-  }
+  // const currentIndex = 
 
-  const prevProject = () => {
-    console.log('this is going to previous project')
-  }
+  // const nextProject = () => {
+  //   console.log('this is going to next project')
+  // }
+
+  // const prevProject = () => {
+  //   console.log('this is going to previous project')
+  // }
 
   return (
     <MotionContainer>
@@ -39,7 +41,7 @@ const ProjectDetails = () => {
         </Link>
         <div>
           {project &&
-            project.map((proj, index) => (
+            project.map((proj) => (
               <div className="my-4 row" key={proj.id}>
                 <div className="proj-detail-container col-lg-8">
                   <img
@@ -98,6 +100,7 @@ const ProjectDetails = () => {
               </div>
             ))}
         </div>
+        
       </div>
     </MotionContainer>
   );
