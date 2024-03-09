@@ -89,7 +89,7 @@ body {
 
   // Footer
   .footer {
-   @media screen and (max-width: 768px){
+   @media screen and (max-width: 800px){
     position: relative;
    } 
   }
@@ -231,6 +231,8 @@ body {
     }
 
     .proj-detail-container {
+      position: relative;
+      
       .img-overlay {
         position: absolute;
         top: 50%;
@@ -238,15 +240,15 @@ body {
         transform: translate(-50%, -50%);
         display: none;
 
-        @media screen and (max-width: 900px) {
-          top: 30%;
-        }
-        @media screen and (min-width: 901px) {
-          left: 35%;
-        }
-        @media screen and (max-width: 600px) {
-          top: 35%;
-        }
+        // @media screen and (max-width: 900px) {
+        //   top: 30%;
+        // }
+        // @media screen and (min-width: 901px) {
+        //   left: 35%;
+        // }
+        // @media screen and (max-width: 600px) {
+        //   top: 35%;
+        // }
 
         .icons {
           font-size: 50px;
