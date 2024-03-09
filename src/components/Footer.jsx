@@ -2,7 +2,7 @@ import { SocialIcon } from "react-social-icons";
 
 const Footer = () => {
   return (
-    <footer className="container text-center footer mb-2">
+    <footer className="container text-center footer mb-2 fixed-bottom ">
       <div className="icons container mb-4">
         <SocialIcon
           url="https://github.com/afsaints0987"
