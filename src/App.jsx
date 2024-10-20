@@ -45,26 +45,28 @@ function App() {
   }
 
   return (
-    
-    <Router>
-      <MotionContainer>
-      <Navigation/>
-      <Routes>
-        <Route exact path="/" element={<Home/>}>
-          <Route index="/" element={<Headline/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/testimonials" element={<Testimonial/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-        </Route>
-        <Route path="/projects" element={<Project/>}/>
-        <Route path="/project/:id" element={<ProjectDetails/>}/>
-        {/* <Route path="/blog" element={<Blog/>}/>
-        <Route path="/blog/:id" element={<BlogDetails/>}/>  */}
-        <Route path="*" element={<Error404/>}/>
-      </Routes>
-      <Footer/>
-      </MotionContainer>
-    </Router>
+    <div className="App">
+      <Router>
+        <MotionContainer>
+        <Navigation/>
+        <Routes>
+          <Route exact path="/" element={<Home/>}>
+            <Route index="/" element={<Headline/>}/>
+            <Route path="/about" element={<About/>}/>
+            <Route path="/testimonials" element={<Testimonial/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+          </Route>
+          <Route path="/projects" element={<Project/>}/>
+          <Route path="/project/:id" element={<ProjectDetails/>}/>
+          {/* <Route path="/blog" element={<Blog/>}/>
+          <Route path="/blog/:id" element={<BlogDetails/>}/>  */}
+          <Route path="*" element={<Error404/>}/>
+        </Routes>
+        <Footer/>
+        </MotionContainer>
+      </Router>
+      
+      </div>
     
   );
 }

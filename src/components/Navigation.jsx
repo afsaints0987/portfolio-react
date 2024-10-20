@@ -16,11 +16,14 @@ const Navigation = () => {
 
   return (
     <nav className="navbar navbar-expand-lg bg-transparent">
-      <div className="container">
+      <div className="container align-middle my-4 px-4 px-lg-0">
         <div className="navbar-brand" id="logo">
-          <Link to="/">
+          <a href="/">
+            <span className="logo text-muted">afsantos.dev</span>
+          </a>
+          {/* <Link to="/">
             <img src={logo} alt="logo" width="75px" height="75px" />
-          </Link>
+          </Link> */}
         </div>
         <span
           className="sidebar-nav d-block d-lg-none d-md-none mx-4"

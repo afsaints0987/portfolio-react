@@ -56,7 +56,18 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
   }
+
+  .App {
+    max-height: 100vh;
+    margin: auto;
+  }
+
   // Navigation
+  .logo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 26;
+  }
 
   .sidebar {
     .nav-link {
