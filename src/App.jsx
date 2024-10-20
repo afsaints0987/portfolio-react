@@ -24,10 +24,16 @@ function App() {
   }
 
   useEffect(() => {
-    loadSplashScreen();
-    setTimeout(() => {
-      setLoading(false)
-    },3000)
+
+    const splashScreenShown = sessionStorage.getItem('splashScreenShown')
+    
+    if (!splashScreenShown) {
+      loadSplashScreen();
+      setTimeout(() => {
+        setLoading(false)
+        sessionStorage.setItem('splashScreenShown', true)
+      },3000)
+    }
   },[])
   
   if(loading){

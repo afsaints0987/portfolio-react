@@ -33,12 +33,11 @@ const Home = () => {
                         <h1>Aaron Fritz Santos</h1>
                         <Typewriter text="Full Stack Developer | UI/UX Designer" speed={50}/>
                         <div className="tech-skills d-flex justify-content-evenly" style={{fontSize: "40px"}}>
-                            <FaIcons.FaHtml5/>
-                            <FaIcons.FaCss3Alt/>
-                            <FaIcons.FaJs/>
                             <FaIcons.FaReact/>
+                            <FaIcons.FaAngular/>
                             <FaIcons.FaNodeJs/>
                             <FaIcons.FaGit/>
+                            <FaIcons.FaAws/>
                         </div>
                     </div>
                 </div>
