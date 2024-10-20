@@ -1,4 +1,4 @@
-import PDF from '/assets/official_cv.pdf'
+import PDF from '/assets/update_cv.pdf'
 
 const PdfViewer = () => {
     // Pdf file view from modal
