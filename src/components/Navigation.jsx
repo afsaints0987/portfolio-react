@@ -19,11 +19,10 @@ const Navigation = () => {
       <div className="container align-middle my-4 px-4 px-lg-0">
         <div className="navbar-brand" id="logo">
           <a href="/">
-            <span className="logo text-muted">afsantos.dev</span>
+            <span className="logo text-muted">
+              afsantos<span className="text-dark">.dev</span>
+            </span>
           </a>
-          {/* <Link to="/">
-            <img src={logo} alt="logo" width="75px" height="75px" />
-          </Link> */}
         </div>
         <span
           className="sidebar-nav d-block d-lg-none d-md-none mx-4"
