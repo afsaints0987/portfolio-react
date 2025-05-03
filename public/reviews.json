@@ -1,0 +1,27 @@
+[
+  {
+    "reviewer_name": "Robert Leeh Pedragosa",
+    "image_url": "/images/person-1.jpg",
+    "review_text": "Highly recommended. Excellent output par and beyond my expectations. Very easy to work with, had a grasp of what I wanted.",
+    "timestamp": "September 8, 2021"
+  },
+  {
+    "reviewer_name": "Ralph Joshua Salazar Galang",
+    "image_url": "/images/person-2.jpg",
+    "review_text": "Very helpful and accommodating artist! Designs are awesome and pricing is reasonable. Highly recommended. I must add, pre and post consultation easily available 💯 Thank you!",
+    "timestamp": "September 3, 2021"
+  },
+  {
+    "reviewer_name": "Bobby Barbadillo",
+    "image_url": "/images/person-3.jpg",
+    "review_text": "Very patient sa needs ni client and revisions. Highly recommended. More clients to come. God bless",
+    "timestamp": "August 28, 2021"
+  },
+  {
+    "reviewer_name": "Jerico Mariano",
+    "image_url": "/images/person-4.jpg",
+    "reviewer_title": "Agile Project Manager & Tech Leader | Driving Growth in Emerging Markets",
+    "review_text": "I had the privilege of working with Aaron on one of our cloud development projects. In a relatively short time, he demonstrated remarkable ability and eagerness not only to learn but also to contribute to a number of methods of engaging and integrating cloud-based systems to improve our end-user experience. His technical ability and problem-solving skills as a full-stack web developer enabled their team to navigate complex concepts that ensured that tasks were not only completed but were delivered with great attention to detail.\n\nBeyond his technical ability, Aaron actively collaborated on a handful of development projects that were part of the company’s initiative to improve its current employee experience. His dedication and work ethic were invaluable during our sprints and contributed greatly to rapidly deploying changes on the project. It was a pleasure working with him and I’m confident that he would bring the same experience to any of his future endeavors.",
+    "timestamp": "November 7, 2023"
+  }
+]
