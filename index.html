@@ -2,39 +2,112 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aaron Santos | Web Designer & Developer Portfolio</title>
+
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="author" content="Aaron Santos" />
+    <meta name="robots" content="index, follow" />
     <meta
       name="description"
-      content="A web developer with expertise in React, Node.js, and Express. Explore his portfolio to see his latest projects, including web applications and custom websites. With years of experience that can help bring your digital ideas to life. Contact him today to start your project!"
+      content="Aaron Santos is a full-time web designer and developer specializing in React, Node.js, and modern web technologies. Explore his portfolio of high-quality websites and applications."
+    />
+    <meta
+      name="keywords"
+      content="Aaron Santos, web developer, front-end, React developer, portfolio, freelance developer, full-stack, web designer Philippines"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://afsantos.netlify.app/" />
+    <meta
+      property="og:title"
+      content="Aaron Santos | Web Developer & Designer"
+    />
+    <meta
+      property="og:description"
+      content="Explore Aaron's portfolio—full-time web developer & designer focused on React, Node.js, and scalable solutions. Let’s build something great."
     />
     <meta
       property="og:image"
       content="https://afsantos.netlify.app/assets/image-logo.png"
     />
-    <meta
-      property="og:title"
-      content="Aaron Fritz Santos | Life as a Developer"
-    />
-    <meta
-      property="og:description"
-      content="A web developer with expertise in React, Node.js, and Express. Explore his portfolio to see his latest projects, including web applications and custom websites. With years of experience that can help bring your digital ideas to life. Contact him today to start your project!"
-    />
-    <meta property="og:url" content="https://afsantos.netlify.app/" />
-    <meta property="og:type" content="website" />
     <meta property="fb:app_id" content="737150288025997" />
-    <link rel="manifest" href="/site.webmanifest" />
 
-    <title>Aaron Santos | Life as a Developer</title>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Aaron Santos | Web Developer & Designer"
+    />
+    <meta
+      name="twitter:description"
+      content="Full-time developer with a passion for web design, React, Node.js, and scalable digital solutions. See the work and connect today."
+    />
+    <meta
+      name="twitter:image"
+      content="https://afsantos.netlify.app/assets/image-logo.png"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "name": "Aaron Santos",
+        "url": "https://afsantos.netlify.app/",
+        "sameAs": [
+          "https://www.linkedin.com/in/afsaints0987",
+          "https://github.com/afsaints0987",
+          "https://twitter.com/stpritchie"
+        ],
+        "jobTitle": "Web Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance"
+        },
+        "image": "https://afsantos.netlify.app/assets/image-logo.png",
+        "description": "A full-time web developer and designer specializing in React, Node.js, and modern web solutions."
+      }
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NV7LVV97");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="canonical" href="https://afsantos.netlify.app/" />
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/index.jsx"></script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NV7LVV97"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+     <script type="module" src="/src/index.jsx"></script>
   </body>
 </html>

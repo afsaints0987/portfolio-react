@@ -3,15 +3,26 @@ import {Link} from 'react-router-dom'
 
 const Headline = () => {
     return (
-        <MotionContainer>
-            <div className="container" id="home-description">
-                <p>A full-time web designer and developer, specialize in offering a comprehensive range of services, including web design, logo design, and web development. I am currently <strong>#OpenForWork</strong> and would be thrilled to lend my expertise to your next project.</p>
+      <MotionContainer>
+        <div className="container" id="home-description">
+          <p>
+            Hi, I’m a full-time web designer and developer, passionate about
+            crafting clean, functional, and visually engaging websites. I
+            specialize in web design, logo creation, and end-to-end web
+            development.
+          </p>
 
-                <p>If you're looking to revamp your online presence or create a brand-new website from scratch, let's work together to bring your vision to life. Please don't hesitate to reach out to me using the button below, and we can discuss your needs in more detail. I look forward to the opportunity to collaborate with you and help your business succeed.</p> 
-                <Link to='/contact' className="btn btn-outline-primary" id="cta-btn">Contact Me</Link>
-            </div>
-        </MotionContainer>
-    )
+          <p>
+            I'm currently open to new projects—whether you're building from
+            scratch or refreshing your online presence, I’d love to help. Click
+            the button below to get in touch and let’s bring your ideas to life.
+          </p>
+          <Link to="/contact" className="btn btn-outline-primary" id="cta-btn">
+            Contact Me
+          </Link>
+        </div>
+      </MotionContainer>
+    );
 }
 
 export default Headline
