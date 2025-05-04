@@ -4,6 +4,7 @@ import * as FaIcons from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import axios from "axios";
+import { useTheme } from "../context/ThemeContext";
 
 const categories = [
   "All",
@@ -15,6 +16,7 @@ const categories = [
 const Project = () => {
   const [projects, setProjects] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const {darkMode} = useTheme()
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -76,12 +78,12 @@ const Project = () => {
                     loading="lazy"
                   />
                 </a>
-                <div className="card-body d-flex flex-column">
+                <div className={`card-body d-flex flex-column ${darkMode ? "bg-dark text-white" : "bg-light text-dark"}`}>
                   <h5 className="card-title">{proj.title}</h5>
                   <p className="card-text">{proj.description}</p>
                   <Link
                     to={`/project/${proj.id}`}
-                    className="mt-auto btn btn-outline-primary btn-sm w-100"
+                    className={`mt-auto btn ${darkMode ? "btn-primary" : "btn-outline-primary"} btn-sm w-100`}
                   >
                     Full Details <FaIcons.FaAngleDoubleRight />
                   </Link>
