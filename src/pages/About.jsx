@@ -4,18 +4,20 @@ import { Modal } from "react-bootstrap";
 import MotionContainer from "../components/MotionContainer";
 import PDF from "/assets/official_cv.pdf";
 import PdfViewer from "../components/PdfViewer";
+import { useTheme } from "../context/ThemeContext";
 
 const About = () => {
   const [modalShow, setModalShow] = useState(false);
   const today = new Date().getFullYear();
+  const {darkMode} = useTheme()
 
   return (
     <MotionContainer>
-      <div className="container mt-4" id="about-page">
-        <h2 className="text-center text-lg-start">
+      <div className="container mt-4">
+        <h2 className="text-center">
           Solution-Driven Web Developer and Web Designer
         </h2>
-        <div className="text-wrap mt-3 text-justify" id="about-text">
+        <div className="text-wrap mt-3 text-justify">
           <p>
             With {today - 2020} years of experience providing business solutions
             for SMEs, I am passionate about using my technical and analytical
@@ -63,13 +65,13 @@ const About = () => {
         <a
           href={PDF}
           download="Official-CV"
-          className="btn btn-outline-primary d-lg-none"
+          className="btn btn-outline-primary d-lg-none w-100"
         >
           <FaIcons.FaDownload /> Download CV
         </a>
 
         <button
-          className="btn btn-outline-primary mt-2 d-none d-lg-block"
+          className={`btn ${darkMode ? "btn-primary" : "btn-outline-primary"} mt-2 d-none d-lg-block w-100`}
           onClick={() => setModalShow(true)}
         >
           <FaIcons.FaFilePdf /> View CV

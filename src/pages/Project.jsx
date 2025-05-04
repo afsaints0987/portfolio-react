@@ -23,7 +23,7 @@ const Project = () => {
         <h2 className="text-center mb-4">Projects</h2>
         <div className="row g-4">
           {projects.map((proj) => (
-            <div key={proj.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div key={proj.id} className="col-12 col-sm-6 col-md-4 col-lg-3 text-dark">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
