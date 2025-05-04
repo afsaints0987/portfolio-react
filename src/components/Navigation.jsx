@@ -7,7 +7,7 @@ import { useTheme } from "../context/ThemeContext";
 
 const Navigation = () => {
   const [show, setShow] = useState(false);
-  const {darkMode} = useTheme()
+  const { darkMode } = useTheme();
 
   const handleClose = () => {
     setShow(false);
@@ -39,12 +39,17 @@ const Navigation = () => {
           show={show}
           onHide={handleClose}
           responsive="md"
-          className="sidebar"
+          className={`${darkMode ? "dark" : "light"}`}
         >
-          <span onClick={handleClose} className="mt-5 mx-4 text-end d-md-none">
+          <span
+            onClick={handleClose}
+            className={`mt-5 mx-4 text-end d-md-none ${
+              darkMode ? "text-white" : "text-dark"
+            }`}
+          >
             <FaIcons.FaTimes />
           </span>
-          <Offcanvas.Body className={show && "sidebar-display"}>
+          <Offcanvas.Body className="bold">
             <Link
               to="/"
               className="nav-link pt-2"
@@ -89,7 +94,11 @@ const Navigation = () => {
                 handleClose();
               }}
             >
-              <button className={`btn ${darkMode ? "btn-primary" : "btn-outline-primary"} border-none`}>
+              <button
+                className={`btn ${
+                  darkMode ? "btn-primary" : "btn-outline-primary"
+                } border-none align-middle`}
+              >
                 Let's Connect
               </button>
             </Link>
