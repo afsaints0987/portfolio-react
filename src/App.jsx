@@ -13,6 +13,7 @@ import Headline from './pages/Headline';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Loading from './components/Loading';
+import Layout from './components/Layout';
 import MotionContainer from './components/MotionContainer'
 
 
@@ -39,9 +40,9 @@ function App() {
   
   if(loading){
     return (
-    <>
+    <Layout>
       <Loading title="< Welcome to my Site! />"/>
-    </>
+    </Layout>
     )
   }
 

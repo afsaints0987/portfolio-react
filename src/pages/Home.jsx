@@ -24,7 +24,7 @@ const Avatar = lazy(() => import("../components/Avatar"));
 const Home = () => {
   return (
     <div className="container d-flex flex-column align-items-center gap-4 py-5">
-      <Layout>
+      {/* <Layout> */}
         <div
           className="d-flex flex-column align-items-center text-center w-100"
           id="homepage"
@@ -55,7 +55,7 @@ const Home = () => {
         <div className="w-100 mt-5">
           <Outlet />
         </div>
-      </Layout>
+      {/* </Layout> */}
     </div>
   );
 };
