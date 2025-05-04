@@ -35,7 +35,7 @@ const Testimonial = () => {
           {review.map((data, index) => (
             <div
               key={index}
-              className={`card p-4 shadow rounded-lg mb-4 ${darkMode ? "bg-gray-800" : "bg-white"}`}
+              className={`card p-4 shadow rounded-lg mb-4 ${darkMode ? "bg-dark text-white" : "bg-white text-dark"}`}
             >
               <div className="text-sm ">
                 <div className="mb-3">
