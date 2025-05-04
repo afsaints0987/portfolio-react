@@ -1,8 +1,10 @@
 import { SocialIcon } from "react-social-icons";
+import ThemeToggle from '../components/ThemeToggle/ThemeToggle'
+
 
 const Footer = () => {
   return (
-    <footer className="container text-center">
+    <footer className="container text-center mt-5">
       <div className="footer mt-auto">
         <div className="icons container mb-4">
           <SocialIcon
@@ -24,7 +26,8 @@ const Footer = () => {
             rel="noreferrer noopener"
           />
         </div>
-        <p style={{ fontFamily: "Courier New" }}>v2.0.0</p>
+        <ThemeToggle/>
+        <p style={{ fontFamily: "Courier New" }}>v2.1.0</p>
       </div>
     </footer>
   );

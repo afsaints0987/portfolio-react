@@ -1,60 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Poppins:wght@400;500;900&display=swap");
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-// Light Mode
-$lightMode: linear-gradient(90deg, #fff, #f3f3f3, #e2ebf0);
-$darkText: #323232;
+// Variables
+$font-main: "Karla", sans-serif;
+$font-heading: "Poppins", sans-serif;
+$font-mono: "Courier New", Courier, monospace;
 
-// Dark Mode
-$darkMode: linear-gradient(90deg, #323232, #000000);
-$lightText: #f7f7f7;
+$light-bg: linear-gradient(90deg, #fff, #f3f3f3, #e2ebf0);
+$dark-bg: linear-gradient(90deg, #323232, #000000);
 
-@mixin lightTheme {
-  background: $lightMode;
-  color: $darkText;
+$dark-color: #323232;
+$light-color: #f7f7f7;
 
-  #logo {
-    p {
-      color: $darkText;
-    }
-  }
+// Mixins
+@mixin theme($bg, $color) {
+  background: $bg;
+  color: $color;
 }
 
-@mixin darkTheme {
-  background: $darkMode;
-  color: $lightText;
-
-  #logo {
-    p {
-      color: $lightText;
-    }
-  }
-}
-
+// Body Styling
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Karla", sans-serif;
-  min-height: 100vh;
-  @include lightTheme();
+  position: relative;
+  z-index: 0;
+  color: $dark-color;
+  transition: color 0.3s ease;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: $light-bg;
+    transition: background 0.5s ease;
+  }
 
   &.dark {
-    @include darkTheme;
-  }
+    color: $light-color;
 
-  &.light {
-    @include lightTheme;
+    &::before {
+      background: $dark-bg;
+    }
   }
 
   a {
-    color: #323232;
+    color: $dark-color;
     text-decoration: none;
     margin-right: 1.5rem;
   }
-  h2 {
-    font-family: "Poppins", sans-serif;
+  h1 {
+    font-family: $font-heading;
     font-weight: 500;
+    text-shadow: #323232;
+  }
+
+  h2 {
+    font-family: $font-heading;
+    font-weight: 500;
+  }
+
+  li {
+    list-style: none;
   }
 
   .App {
@@ -62,85 +67,31 @@ body {
     margin: auto;
   }
 
-  // Navigation
   .logo {
-    font-family: "Poppins", sans-serif;
+    font-family: $font-heading;
     font-weight: 600;
-    font-size: 26;
+    font-size: 26px;
   }
 
-  .sidebar {
-    .nav-link {
-      font-weight: 500;
-      transition: 0.2s ease-in;
+  .sidebar .nav-link {
+    font-weight: 500;
+    transition: 0.2s ease-in;
 
-      &:hover {
-        font-weight: 600;
-        color: #0d6efd;
-        transition: all 0.2s ease-in;
-      }
+    &:hover {
+      font-weight: 600;
+      color: #0d6efd;
     }
   }
 
-  .sidebar-display {
+  #headline-text {
+    font-weight: 600;
+    font-size: calc(0.25vw + 1.75vh);
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  .avatar {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    font-size: 1.5rem;
-    line-height: 3rem;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-    min-height: 50vh;
-  }
-
-  .inquire-btn {
-    vertical-align: middle;
-  }
-
-  // Footer
-  .footer {
-   @media screen and (max-width: 800px){
-    position: relative;
-   } 
-  }
-
-  // Home Page
-  #home-description {
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    align-items: center;
-    margin-top: 6.75rem;
-
-    @media screen and (max-width: 900px) {
-      margin-top: 3rem;
-    }
-  }
-  #homepage {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    margin-top: 5rem;
-
-    .headline {
-      h1 {
-        font-weight: 700;
-        text-shadow: 1px 1px 1px #323232;
-      }
-    }
-
-    #headline-text {
-      font-weight: 600;
-      font-size: calc(0.25vw + 1.75vh);
-      font-family: "Courier New", Courier, monospace;
-    }
-
-    .avatar {
-      outline: 3px solid #5c5c5c;
-      border: 2px solid #f3f3f3;
-      border-radius: 50%;
-    }
 
     .avatar-img {
       display: block;
@@ -148,6 +99,8 @@ body {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      outline: 3px solid #5c5c5c;
+      border: 2px solid #f3f3f3;
       border-radius: 50%;
 
       width: 150px;
@@ -160,161 +113,12 @@ body {
         transition: all 0.3s ease-in-out;
       }
     }
-
-    .icons {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-    }
   }
 
-  // About Page
-  #about-page {
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    margin: auto;
-    min-height: 50vh;
-  }
-
-  // Contact Page {
-  #contact {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-
-    .contact-icons {
-      list-style: none;
-
-      .contact-icon {
-        font-weight: 500;
-      }
-    }
-
-    p {
-      font-weight: bold;
-    }
-
-    #contact-form textarea {
-      resize: none;
-    }
-  }
-  // Blog Details Page
-
-  #blog-detail {
-    p {
-      text-align: justify;
-      font-weight: 400;
-      line-height: 1.75rem;
-    }
-  }
-
-  // Project Page
-
-  .project-container {
-    min-height: 50vh;
-
-    @media screen and (max-width: 600px) {
-      .proj-details {
-        h4 {
-          font-size: 18px;
-        }
-        p {
-          font-size: 14px;
-        }
-      }
-    }
-
-    .proj-select:hover {
-      font-weight: 900;
-      transition: all 0.3s ease-in-out;
-    }
-  }
-
-  // Project Details
-  #proj-detail {
-    p {
-      text-align: justify;
-
-      @media screen and (max-width: 600px) {
-        font-size: 14px;
-      }
-    }
-
-    .proj-detail-container {
+  // Example of simplified responsive styles
+  .footer {
+    @media (max-width: 800px) {
       position: relative;
-      
-      .img-overlay {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: none;
-
-        // @media screen and (max-width: 900px) {
-        //   top: 30%;
-        // }
-        // @media screen and (min-width: 901px) {
-        //   left: 35%;
-        // }
-        // @media screen and (max-width: 600px) {
-        //   top: 35%;
-        // }
-
-        .icons {
-          font-size: 50px;
-          color: #323232;
-          transition: 0.5s;
-
-          @media screen and (max-width: 900px) {
-            font-size: 20px;
-          }
-
-          &:hover {
-            cursor: pointer;
-            color: #007bff;
-            transition: 0.5s;
-          }
-        }
-
-        p {
-          font-family: "Courier New", Courier, monospace;
-          margin-top: 5px;
-        }
-      }
-
-      &:hover {
-        transition: 0.5s;
-
-        .img-overlay {
-          display: flex;
-          justify-content: space-between;
-        }
-        .project-image {
-          opacity: 0.2;
-          transition: 0.5s;
-        }
-      }
-    }
-  }
-
-  // Loader
-
-  #loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: auto;
-
-    p {
-      font-size: 2rem;
-      font-family: "Poppins", sans-serif;
-      font-weight: 500;
-
-      @media screen and (max-width: 900px) {
-        font-size: 1rem;
-      }
     }
   }
 }

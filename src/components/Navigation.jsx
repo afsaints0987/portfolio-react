@@ -3,9 +3,11 @@ import * as FaIcons from "react-icons/fa";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useState } from "react";
 import logo from "/assets/logo-1.png";
+import { useTheme } from "../context/ThemeContext";
 
 const Navigation = () => {
   const [show, setShow] = useState(false);
+  const {darkMode} = useTheme()
 
   const handleClose = () => {
     setShow(false);
@@ -20,7 +22,10 @@ const Navigation = () => {
         <div className="navbar-brand" id="logo">
           <a href="/">
             <span className="logo text-muted">
-              afsantos<span className="text-dark">.dev</span>
+              afsantos
+              <span className={darkMode ? "text-white" : "text-dark"}>
+                .dev
+              </span>
             </span>
           </a>
         </div>
@@ -84,7 +89,7 @@ const Navigation = () => {
                 handleClose();
               }}
             >
-              <button className="btn btn-primary border-none">
+              <button className={`btn ${darkMode ? "btn-primary" : "btn-outline-primary"} border-none`}>
                 Let's Connect
               </button>
             </Link>
