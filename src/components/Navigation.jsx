@@ -86,7 +86,15 @@ const Navigation = () => {
             >
               Testimonials
             </Link>
-            {/* <Link to='/blog' className="nav-link" onClick={()=>{handleClose()}}>Blog</Link> */}
+            <Link
+              to="/blog"
+              className="nav-link pt-2"
+              onClick={() => {
+                handleClose();
+              }}
+            >
+              Blog
+            </Link>
             <Link
               to="/contact"
               className="nav-link"
