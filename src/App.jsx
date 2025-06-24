@@ -1,49 +1,46 @@
-import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import {useState, useCallback, useEffect} from 'react'
-import Project from './pages/Project';
-import ProjectDetails from './pages/ProjectDetails'
-import Home from './pages/Home';
-import About from './pages/About';
-import Testimonial from './pages/Testimonial';
-import Error404 from './pages/Error404';
-// import Blog from './pages/Blog';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useCallback, useEffect } from "react";
+import Project from "./pages/Project";
+import ProjectDetails from "./pages/ProjectDetails";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Testimonial from "./pages/Testimonial";
+import Error404 from "./pages/Error404";
+import Blog from "./pages/Blog";
 // import BlogDetails from './pages/BlogDetails'
-import Contact from './pages/Contact';
-import Headline from './pages/Headline';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import Loading from './components/Loading';
-import Layout from './components/Layout';
-import MotionContainer from './components/MotionContainer'
-
-
+import Contact from "./pages/Contact";
+import Headline from "./pages/Headline";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import Loading from "./components/Loading";
+import Layout from "./components/Layout";
+import MotionContainer from "./components/MotionContainer";
 
 function App() {
-  const [loading, setLoading] = useState(false)
-  
+  const [loading, setLoading] = useState(false);
+
   const loadSplashScreen = () => {
-    setLoading(true)
-  }
+    setLoading(true);
+  };
 
   useEffect(() => {
+    const splashScreenShown = sessionStorage.getItem("splashScreenShown");
 
-    const splashScreenShown = sessionStorage.getItem('splashScreenShown')
-    
     if (!splashScreenShown) {
       loadSplashScreen();
       setTimeout(() => {
-        setLoading(false)
-        sessionStorage.setItem('splashScreenShown', true)
-      },3000)
+        setLoading(false);
+        sessionStorage.setItem("splashScreenShown", true);
+      }, 3000);
     }
-  },[])
-  
-  if(loading){
+  }, []);
+
+  if (loading) {
     return (
-    <Layout>
-      <Loading title="< Welcome to my Site! />"/>
-    </Layout>
-    )
+      <Layout>
+        <Loading title="< Welcome to my Site! />" />
+      </Layout>
+    );
   }
 
   return (
@@ -60,11 +57,11 @@ function App() {
             <Route path="/testimonials" element={<Testimonial />} />
             <Route path="/projects" element={<Project />} />
             <Route path="/project/:id" element={<ProjectDetails />} />
-            {/* <Route path="/blog" element={<Blog/>}/>
-          <Route path="/blog/:id" element={<BlogDetails/>}/>  */}
+            <Route path="/blog" element={<Blog />} />
+            {/* <Route path="/blog/:id" element={<BlogDetails/>}/>  */}
             <Route path="*" element={<Error404 />} />
           </Routes>
-          
+
           <Footer />
         </MotionContainer>
       </Router>

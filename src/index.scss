@@ -99,7 +99,7 @@ body {
 
     .avatar-img {
       display: block;
-      background-image: url("/assets/avatar-2.jpg");
+      background-image: url("/assets/avatar-v3.gif");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -111,11 +111,12 @@ body {
       height: 150px;
       transition: all 0.3s ease-in-out;
 
-      &:hover {
-        background-image: url("/assets/avatar_profile.jpg");
-        transform: rotateY(360deg);
-        transition: all 0.3s ease-in-out;
-      }
+      // &:hover {
+      //   background-image: url("/assets/avatar-no-bg.gif");
+      //   cursor: pointer;
+      //   // transform: rotateY(360deg);
+      //   transition: all 0.3s ease-in-out;
+      // }
     }
   }
 
